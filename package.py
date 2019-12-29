@@ -9,7 +9,7 @@ description = (
     Walt Disney Animation Studios for production-quality rendering
     """
 )
-tools = []
+tools = ["ptxinfo"]
 requires = []
 build_system = "cmake"
 private_build_requires = [
@@ -17,3 +17,7 @@ private_build_requires = [
     "~doxygen",
     "~graphviz",
 ]
+
+
+def commands():
+    env.PATH.append("{root}/bin")
